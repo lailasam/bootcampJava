@@ -9,6 +9,16 @@ public class Teste {
         System.out.println("Valor total: " + carrinho.calcularValorTotal());
         carrinho.removerItem("Maçã");
         carrinho.exibirItens();
+
+    SomaNumeros somaNumeros = new SomaNumeros();
+    somaNumeros.adicionarNumero(10);
+    somaNumeros.adicionarNumero(20);
+    somaNumeros.adicionarNumero(5);
+    
+    System.out.println("Soma: " + somaNumeros.calcularSoma());
+    System.out.println("Maior número: " + somaNumeros.encontrarMaiorNumero());
+    System.out.println("Menor número: " + somaNumeros.encontrarMenorNumero());
+    System.out.println("Números na lista: " + somaNumeros.exibirNumeros());
     }
 
 }
