@@ -1,14 +1,15 @@
 package interfaces;
 
-public class Quadrado implementes IForma {
+public class Quadrado implements IForma {
 private double lado;
 public Quadrado(double lado) {
     this.lado = lado;
 }
 @Override
 public double calcularArea() {
-    return Math.pow(lado, 2);
+    return Math.pow(this.lado, 2);
 }
+
 public double getLado() {
     return lado;
 }
