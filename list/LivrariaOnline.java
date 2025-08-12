@@ -2,6 +2,7 @@ package bootcampJava.list;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 /*Crie uma classe chamada "LivrariaOnline" que representa uma livraria online. 
 Essa classe utiliza um Map para armazenar os livros disponíveis na livraria, 
@@ -34,4 +35,8 @@ public void removerLivro(String titulo){
         livros.remove(key);
     }
 }
+public Map<String, Livro> exibirLivrosOrdenadosPorPreco() {
+    Map<String, Livro> livrosOrdenados = new TreeMap<>();
+    return livrosOrdenados;
+} //precisa do comparator e array list e linkedhashmap
 }
