@@ -11,7 +11,7 @@ ordenarAscendente(): Ordena os números da lista em ordem ascendente usando
 a interface Comparable e a class Collections.
 ordenarDescendente(): Ordena os números da lista em ordem descendente
 usando um Comparable e a class Collections. */
-public class OrdenacaoNumeros implements Comparable<OrdenacaoNumeros> {
+public class OrdenacaoNumeros {
 private List<Integer> numeros;
 public OrdenacaoNumeros() {
     this.numeros = new ArrayList<>();
@@ -19,10 +19,7 @@ public OrdenacaoNumeros() {
 public void adicionarNumero(int numero) {
     numeros.add(numero);
 }
-@Override
-public int compareTo(OrdenacaoNumeros numero) {
-    return Integer.compare(this.numeros.get(0), numero.numeros.get(0));
-}
+
 public List<Integer> ordenarAscendente(){
     List<Integer> numerosOrdenados = new ArrayList<>(numeros);
     Collections.sort(numerosOrdenados);
