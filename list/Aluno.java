@@ -1,6 +1,9 @@
 package bootcampJava.list;
+
+import java.util.Comparator;
+
 /*nome, matricula e nota */
-public class Aluno {
+public class Aluno implements Comparable<Aluno> {
 long matricula;
 double media;
 String nome;
@@ -37,4 +40,16 @@ public String toString() {
             ", nome='" + nome + '\'' +
             '}';
 }
+@Override
+public int compareTo(Aluno a) {
+    return this.nome.compareTo(a.nome);
+}
+}
+class AlunoNotaComparator implements Comparator<Aluno> {
+
+    @Override
+    public int compare(Aluno a1, Aluno a2) {
+        return Double.compare(a1.media, a2.media);
+    }
+    
 }
