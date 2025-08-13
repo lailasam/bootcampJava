@@ -12,7 +12,15 @@ para ordenar a lista de números em ordem crescente e a exiba no console. */
     /*Desafio 2 - Imprima a soma dos números pares da lista:
 Utilizando a Stream API, realize a soma dos números 
 pares da lista e exiba o resultado no console. */
-    numeros.stream().filter(n->n%2==0).reduce(0, Integer::sum).forEach(System.out::println);
-    numeros.stream().filter(n->n>=0).
+    System.out.println(numeros.stream().filter(n->n%2==0).reduce(0, Integer::sum)); //0 indica valor inicial
+    /*Desafio 3 - Verifique se todos os números da lista são positivos:
+Com a ajuda da Stream API, verifique se todos os 
+números da lista são positivos e exiba o resultado no console. */
+    numeros.stream().filter(n->n<0).findFirst()
+    .ifPresentOrElse(
+        y -> System.out.println("ha algum elemento que nao eh positivo"),
+        () -> System.out.println("todos os elementos sao positivos")
+    );
+
    }
 }

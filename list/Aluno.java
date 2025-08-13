@@ -45,6 +45,7 @@ public int compareTo(Aluno a) {
     return this.nome.compareTo(a.nome);
 }
 }
+
 class AlunoNotaComparator implements Comparator<Aluno> {
 
     @Override

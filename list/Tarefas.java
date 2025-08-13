@@ -6,6 +6,9 @@ public String getDescricao() {
     return descricao;
 }
 private boolean concluida;
+public void setConcluida(boolean concluida) {
+    this.concluida = concluida;
+}
 public boolean isConcluida() {
     return concluida;
 }
